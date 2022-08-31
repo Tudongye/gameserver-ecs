@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<!--world name="World对象名" package="包名"-->
+<world name="PlayerWorld" package="player">
+    <!--cop name="Cop对象名" type="Cop数据类型，业务自定义" cache="是否为缓存型Cop,否则每次Sys调用结束后直接清空对应Cop" -->
+    <cop name="WeaponCop" type="WeaponInfo" cache="1"/>
+    <cop name="BagCop" type="BagInfo" cache="1"/>
+    <cop name="PlayerCacheCop" type="PlayerCache" cache="0"/>
+
+    <!--sys name="Sys对象名"-->
+    <sys name="ActiveWeaponSys">
+        <cop name="WeaponCop"/>
+        <cop name="BagCop"/>
+        <cop name="PlayerCacheCop"/>
+    </sys>
+
+    <sys name="GetWeaponSys">
+        <cop name="WeaponCop"/>
+        <cop name="PlayerCacheCop"/>
+    </sys>
+
+    <sys name="CreatePlayerSys">
+        <cop name="PlayerCacheCop"/>
+    </sys>
+
+    <!--entity name="Entity对象名"-->
+    <entity name="PlayerEntity">
+        <!--cop name="Cop对象名" ins="Entity内Cop编号"-->
+        <cop name="WeaponCop" ins="1"/>
+        <cop name="BagCop" ins="2"/>
+        <cop name="PlayerCacheCop" ins="3"/>
+
+        <sys name="ActiveWeaponSys"/>
+        <sys name="GetWeaponSys"/>
+        <sys name="CreatePlayerSys"/>
+    </entity>
+</world>
