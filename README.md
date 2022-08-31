@@ -33,6 +33,7 @@ player  // 一个样例模块，模块功能详见前述文章
 main // 样例测试入口
 - main.go // 
 
+![1661858126-857-630df14ed13fe-408906](https://user-images.githubusercontent.com/16680818/187608391-23177bf7-c5a5-461a-9059-221d986d7f58.png)
 
 
 # 使用方法(以上述player模块为例)
